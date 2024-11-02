@@ -1,0 +1,17 @@
+<html>
+<body>
+    <h1>Ürün Yükleme Durumu</h1>
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Kayıtlı Ürünler</h2>
+    <ul>
+        {% for product in all_products %}
+            <li>{{ product.title }} - {{ product.price }} - <img src="{{ product.image_url }}" alt="Ürün Görseli"></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
